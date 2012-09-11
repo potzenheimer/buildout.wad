@@ -22,8 +22,8 @@ body > header {
         .navbar-inner {
             .border-radius(0px);
             .container {
-                width: @gridRowWidth;
-                .container-fixed();
+                //width: @gridRowWidth;
+                //.container-fixed();
             }
         }
     }
@@ -38,7 +38,28 @@ body > header {
          -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
               box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
     }
+    .brand {
+      float:right !important;
+    }
     margin-bottom: @baseLineHeight;
+}
+
+.icon-x-large {
+    font-size: 60px;
+    //color: @linkColor;
+}
+
+#blog-header {
+  h1 {
+    background:url(../img/logo.png) no-repeat 0 0 transparent;
+    .size(80px, 500px);
+    text-indent: -99999px;
+    overflow: hidden;
+  }
+}
+
+#blog-link {
+  padding: @baseLineHeight 0;
 }
 
 // wad styles for a HMTL5 based site footer
