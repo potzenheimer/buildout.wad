@@ -16,7 +16,8 @@ body {
 // twitter bootstarp navbar to make the edit bar look like a
 // browser toolbar
 body > header {
-    #toolbar + nav {
+    #toolbar + nav,
+    #editbar-wrapper + nav {
         margin-top: @navbarHeight;
         .navbar-inner {
             .border-radius(0px);
@@ -37,6 +38,7 @@ body > header {
          -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
               box-shadow: inset 0 3px 8px rgba(0,0,0,.125);
     }
+    margin-bottom: @baseLineHeight;
 }
 
 // wad styles for a HMTL5 based site footer

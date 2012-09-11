@@ -9,12 +9,14 @@ from Products.CMFPlone.PloneBatch import Batch
 from plone.app.discussion.interfaces import IConversation
 from plone.app.contentlisting.interfaces import IContentListing
 
+from plone.app.layout.navigation.interfaces import INavigationRoot
+
 from wad.blog.blog import IBlog
 from wad.blog.blogentry import IBlogEntry
 
 
 class BlogView(grok.View):
-    grok.context(IBlog)
+    grok.context(INavigationRoot)
     grok.require('zope2.View')
     grok.name('blog-view')
 
