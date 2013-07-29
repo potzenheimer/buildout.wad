@@ -13,7 +13,7 @@ def find_assignment_context(assignment, context):
             manager = getUtility(IPortletManager, manager_name,
                                  context=context)
             mapping = getMultiAdapter((context, manager),
-                                       IPortletAssignmentMapping)
+                                      IPortletAssignmentMapping)
             if assignment_name in mapping:
                 if mapping[assignment_name] is assignment.aq_base:
                     return context
