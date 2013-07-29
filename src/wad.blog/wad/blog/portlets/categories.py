@@ -70,6 +70,8 @@ class Renderer(base.Renderer):
     def archive_url(self, subject):
         # Get the path of where the portlet is created. That's the blog.
         assignment_context = find_assignment_context(self.data, self.context)
+        if assignment_context is None:
+            assignment_context = self.context
         self.folder_url = assignment_context.absolute_url()
         sub = urllib2.quote(subject.encode('utf-8'))
         url = '%s/%s?category=%s' % (self.folder_url,
