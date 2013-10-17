@@ -222,15 +222,7 @@ module.exports = function (grunt) {
     // Copy jekyll generated templates and rename for diazo
     grunt.registerTask('copy-templates', '', function () {
         grunt.file.copy('_site/index.html', 'dist/index.html');
-        grunt.file.copy('_site/contact/index.html', 'dist/contact.html');
         grunt.file.copy('_site/signin/index.html', 'dist/signin.html');
-        grunt.file.copy('_site/register/index.html', 'dist/register.html');
-        grunt.file.copy('_site/frontpage/index.html', 'dist/frontpage.html');
-        grunt.file.copy('_site/favorites/index.html', 'dist/favorites.html');
-        grunt.file.copy('_site/search/index.html', 'dist/search.html');
-        grunt.file.copy('_site/searchresults/index.html', 'dist/searchresults.html');
-        grunt.file.copy('_site/pitchview/index.html', 'dist/pitchview.html');
-        grunt.file.copy('_site/pitchedit/index.html', 'dist/pitchedit.html');
     });
 
     // Docs HTML validation task
