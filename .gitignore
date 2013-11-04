@@ -20,7 +20,7 @@ var
 .svn
 *.pyc
 *.pyo
-etc/**/*
+src/ade25.toolbar
 src/plone.app.blocks
 src/plone.app.tiles
 src/plone.tiles
