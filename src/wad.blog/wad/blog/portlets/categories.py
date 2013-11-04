@@ -9,9 +9,8 @@ from zope import schema
 from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Products.CMFPlone.utils import safe_unicode
 
-from wad.blog.utils import find_assignment_context
+from wad.blog.utils import find_portlet_assignment_context
 from wad.blog.blogentry import IBlogEntry
 from wad.blog import MessageFactory as _
 
@@ -69,7 +68,8 @@ class Renderer(base.Renderer):
 
     def archive_url(self, subject):
         # Get the path of where the portlet is created. That's the blog.
-        assignment_context = find_assignment_context(self.data, self.context)
+        assignment_context = find_portlet_assignment_context(self.data,
+                                                             self.context)
         if assignment_context is None:
             assignment_context = self.context
         self.folder_url = assignment_context.absolute_url()
@@ -80,7 +80,10 @@ class Renderer(base.Renderer):
         return url
 
     def blog_url(self):
-        assignment_context = find_assignment_context(self.data, self.context)
+        assignment_context = find_portlet_assignment_context(self.data,
+                                                             self.context)
+        if assignment_context is None:
+            assignment_context = self.context
         return assignment_context.absolute_url()
 
     def count_entries(self, subject):

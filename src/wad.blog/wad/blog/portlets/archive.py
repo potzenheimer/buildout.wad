@@ -8,7 +8,7 @@ from zope import schema
 from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from wad.blog.utils import find_assignment_context
+from wad.blog.utils import find_portlet_assignment_context
 from wad.blog.blogentry import IBlogEntry
 
 from wad.blog import MessageFactory as _
@@ -80,7 +80,8 @@ class Renderer(base.Renderer):
         self._counts = {}
         catalog = getToolByName(self.context, 'portal_catalog')
         # Get the path of where the portlet is created. That's the blog.
-        assignment_context = find_assignment_context(self.data, self.context)
+        assignment_context = find_portlet_assignment_context(self.data,
+                                                             self.context)
         if assignment_context is None:
             assignment_context = self.context
         self.folder_path = '/'.join(assignment_context.getPhysicalPath())
@@ -110,7 +111,7 @@ class Renderer(base.Renderer):
             months[month] = allmonths[year, month]
 
     def years(self):
-        return sorted(self._counts.keys())
+        return sorted(self._counts.keys(), reverse=True)
 
     def months(self, year):
         # sort as integers, return as strings

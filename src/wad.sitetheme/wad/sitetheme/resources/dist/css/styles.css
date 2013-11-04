@@ -10379,6 +10379,15 @@ dd.image-caption {
   border-radius: 0;
 }
 
+.app-aside-header {
+  font-size: 14px;
+  color: #999999;
+}
+
+.app-aside-header .tab-pane {
+  padding: 22px 0;
+}
+
 .app-aside {
   padding-top: 22px;
 }

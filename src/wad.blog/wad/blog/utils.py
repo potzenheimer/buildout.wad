@@ -7,8 +7,7 @@ from plone.portlets.interfaces import IPortletManager
 from zope.component import getUtility, getMultiAdapter, ComponentLookupError
 
 
-def find_assignment_context(assignment, context):
-    # Finds the creation context of the assignment
+def find_portlet_assignment_context(assignment, context):
     context = aq_inner(context)
     manager_name = assignment.manager.__name__
     assignment_name = assignment.__name__
