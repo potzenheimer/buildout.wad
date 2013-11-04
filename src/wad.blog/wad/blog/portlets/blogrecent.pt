@@ -1,26 +1,20 @@
-<div class="well"
+<div class="panel panel-default"
     id="splashbox-blog-recent"
     i18n:domain="wad.blog">
-
-    <h4>
-        <i class="icon-star" />
-        Letzte Blogbeitr&auml;ge
-    </h4>
-    <ul class="nav nav-list">
+    <div class="panel-heading">
+        <h4 class="panel-title"><i class="fa fa-star" />
+            Letzte Blogbeitr&auml;ge
+        </h4>
+    </div>
+    <ul class="list-group">
       <tal:block define="plone_view context/@@plone;"
         repeat="item view/items">
-        <li class="nav-header">
-          <i class="icon-file" />
-          <span tal:content="item/Title">Entry Title</span>
-          <small tal:content="python:plone_view.toLocalizedTime(item.Date)">
-            1779</small>
-        </li>
-        <li>
-            <a tal:attributes="href python:view.item_url(item)" class="link-more">
-               <i class="icon-plus-sign" /> mehr
-            </a>
-        </li>
-        <li class="divider"></li>
+        <a href="#" class="list-group-item">
+            <h5 class="list-group-item-heading"
+                tal:content="item/Title">List group item heading</h5>
+            <small class="list-group-item-text"
+                tal:content="python:plone_view.toLocalizedTime(item.Date)" />
+        </a>
       </tal:block>
     </ul>
 </div>
