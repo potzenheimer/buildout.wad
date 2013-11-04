@@ -10,10 +10,6 @@
 <metal:main fill-slot="main">
   <metal:content-core define-macro="main">
 
-  <!--<header class="page-header">
-    <h1 tal:content="context/Title">Title inserted here</h1>
-  </header>-->
-
   <p class="documentDescription lead" tal:condition="context/Description"
     tal:content="context/Description" />
 
@@ -31,9 +27,9 @@
           <p tal:condition="item/Description"
             tal:content="item/Description" />
 
-        <a href="" class="btn btn-small btn-inverse"
+        <a href="" class="btn btn-sm btn-default"
               tal:attributes="href item/getURL">
-              <i class="icon-eye-open" />
+              <i class="fa fa-eye-open"></i>
               Weiterlesen</a>
       </article>
     </tal:block>
