@@ -1,9 +1,9 @@
 /*!
-* RMS Theme v1.0.0 by Ade25
+* WAD Theme v1.0.0 by meetshaus
 * Copyright Ade25
 * Licensed under [object Object].
 *
-* Designed and built by ade25
+* Designed and built by meetshaus
 */
 /**
 * bootstrap.js v3.0.0 by @fat and @mdo
@@ -2004,3 +2004,15 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   })
 
 }(window.jQuery);
+
+/*jslint white:false, onevar:true, undef:true, nomen:true, eqeqeq:true, plusplus:true, bitwise:true, regexp:true, newcap:true, immed:true, strict:false, browser:true */
+/*global jQuery:false, document:false */
+'use strict';
+
+(function ($) {
+    $(document).ready(function () {
+        if ($('body').hasClass('lt-ie7')) {return; }
+        // Application specific javascript code goes here
+    }
+    );
+}(jQuery));

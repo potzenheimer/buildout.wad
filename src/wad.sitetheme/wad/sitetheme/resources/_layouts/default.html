@@ -11,11 +11,24 @@
     <a class="sr-only" href="#content">Skip navigation</a>
     {% include toolbar.html %}
     {% include navbar.html %}
-    <main class="app-content" id="content" role="main">
-        {{ content }}
-    </main>
-    <!-- JS and analytics only. -->
+    <div class="container app-main">
+    <div class="row">
+        <div class="col-xs-12 col-md-9">
+            <main class="app-content" id="content" role="main">
+                {{ content }}
+            </main>
+            <aside class="app-content-aside" id="content-footer"
+                role="contentinfo">Comments</aside>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <aside id="sidebar-info"></aside>
+            <aside class="app-aside" id="app-sidebar" role="contentinfo">
+                {% include sidebar.html %}
+            </aside>
+        </div>
+    </div>
+    </div>
+    {% include footer.html %}
     {% include javascript.html %}
-
   </body>
 </html>

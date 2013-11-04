@@ -2,7 +2,7 @@
      id="infobox-blog-archive"
      i18n:domain="wad.blog">
       <h4>
-        <i class="icon-calendar" />
+        <i class="fa fa-calendar"></i>
           <i18n:block translate="">Blog Archive</i18n:block>
       </h4>
       <ul class="nav nav-list">

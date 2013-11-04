@@ -12,11 +12,11 @@ module.exports = function (grunt) {
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
         banner: '/*!\n' +
-                  '* RMS Theme v<%= pkg.version %> by Ade25\n' +
+                  '* WAD Theme v<%= pkg.version %> by meetshaus\n' +
                   '* Copyright <%= pkg.author %>\n' +
                   '* Licensed under <%= pkg.licenses %>.\n' +
                   '*\n' +
-                  '* Designed and built by ade25\n' +
+                  '* Designed and built by meetshaus\n' +
                   '*/\n',
         jqueryCheck: 'if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }\n\n',
 
@@ -51,15 +51,14 @@ module.exports = function (grunt) {
                     'bower_components/modernizr/modernizr.js',
                     'bower_components/bootstrap/dist/js/bootstrap.js',
                     'bower_components/holderjs/holder.js',
-                    'js/main.js'
+                    'js/application.js'
                 ],
                 dest: 'dist/js/<%= pkg.name %>.js'
             },
             theme: {
                 src: [
                     'bower_components/bootstrap/dist/js/bootstrap.js',
-                    'bower_components/jquery.expander/jquery.expander.js',
-                    'js/main.js'
+                    'js/application.js'
                 ],
                 dest: 'dist/js/main.js'
             }
@@ -96,8 +95,10 @@ module.exports = function (grunt) {
             fonts: {
                 expand: true,
                 flatten: true,
-                cwd: 'bower_components/',
-                src: ['font-awesome/font/*'],
+                src: [
+                    'bower_components/font-awesome/fonts/*',
+                    'assets/font/*'
+                ],
                 dest: 'dist/assets/fonts/'
             },
             ico: {

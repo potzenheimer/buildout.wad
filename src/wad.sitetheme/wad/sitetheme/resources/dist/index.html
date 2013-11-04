@@ -85,7 +85,7 @@
         </ul>
     </div><!--/.nav-collapse -->
 </div>
-    <nav class="navbar navbar-default navbar-fixed-top app-navbar" id="app-navbar" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top app-navbar" id="app-navbar" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -103,12 +103,15 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul
+    </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
 
-    <main class="app-content" id="content" role="main">
-        <main class="app-content" id="content" role="main">
+    <div class="container app-main">
+    <div class="row">
+        <div class="col-xs-12 col-md-9">
+            <main class="app-content" id="content" role="main">
+                <main class="app-content" id="content" role="main">
   <div class="container">
     <h1>App content</h1>
     <p class="lead">Sleek, intuitive, and powerful mobile first front-end
@@ -116,12 +119,47 @@
     </p>
   </div>
 </main>
-    </main>
-    <!-- JS and analytics only. -->
+            </main>
+            <aside class="app-content-aside" id="content-footer"
+                role="contentinfo">Comments</aside>
+        </div>
+        <div class="col-xs-12 col-md-3">
+            <aside id="sidebar-info"></aside>
+            <aside class="app-aside" id="app-sidebar" role="contentinfo">
+                <div class="app-sidebar" id="app-sidebar">
+    <div id="infobox-blog-archive" class="panel panel-default">
+        <div class="panel-heading">
+            <button data-target="#blog-archive" data-toggle="collapse" class="btn btn-link btn-xs pull-right" type="button">
+                <i class="icon-expand"></i> einblenden
+            </button>
+            <h4 class="panel-title">Blog Archiv</h4>
+        </div>
+        <div id="blog-archive" class="panel-collapse in collapse" style="height: auto;">
+            <div class="panel-body panel-body-archive">
+                <h5>2012</h5>
+                <ul class="nav nav-pills nav-stacked"><li>
+                        <a href="http://localhost:8499/plonesite/blog-view?year=2012&amp;month=10">
+                            <span class="badge pull-right">1</span>
+                            <span class="archive-month">Oktober</span>
+                        </a>
+                    </li>
+                </ul>
+             </div>
+        </div>
+    </div>
+</div>
+            </aside>
+        </div>
+    </div>
+    </div>
+    <footer class="app-footer" id="app-footer">
+  <div class="container">
+    <p>&copy; 2012 Gemeinnützige Genossenschaft zum Betrieb der Rudolf-Steiner-Schule Ismaning Freie Waldorfschule e.G.</p>
+  </div>
+</footer>
     <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/rms.min.js"></script>
-
   </body>
 </html>
