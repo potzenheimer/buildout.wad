@@ -29,13 +29,13 @@
         <after content="/html/head/meta" theme-children="/html/head" />
         <!-- Copy style, script and link tags in the order they appear in the content -->
         <after
-            content="/html/head/style | /html/head/link"
+            content="/html/head/style | /html/head/link | /html/head/script"
             theme-children="/html/head"
             />
         <!-- Move javascripts to the footer. this might cause problems
              with Plone Addons that asume the js already loaded -->
-        <after content="/html/head/script" 
-            theme="/html/body/footer" />
+        <!-- <after content="/html/head/script" 
+            theme="/html/body/footer" /> -->
 
         <drop theme="/html/head/style" />
         <drop theme="/html/head/script" />
@@ -104,6 +104,8 @@
             css:theme-children="#sidebar-info" />
         <replace css:content-children="#portal-column-two > *"
             css:theme-children="#app-sidebar" />
+
+        <drop theme="/html/body/script" />
 
     </rules>
 
